@@ -9,13 +9,16 @@ namespace Test
         [Inject]
         public TestView view { get; set; }
 
+        [Inject]
+        public RequestSignal signal_Request { get; set; }
+
         public override void OnRegister()
         {
             view.signal_Click.AddListener(OnClick);
         }
         public void OnClick()
         {
-            Debug.Log("button clicked");
+            signal_Request.Dispatch("www.baidu.com");
         }
     }
 }

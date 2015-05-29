@@ -29,8 +29,17 @@ namespace Test
         }
         protected override void mapBindings()
         {
+            injectionBinder.Bind<FufillSignal>().ToSingleton();
+
+            injectionBinder.Bind<IService>().To<TestService>();
+
+
             mediationBinder.Bind<TestView>().To<TestMediator>();
+
+            commandBinder.Bind<RequestSignal>().To<RequestCommand>();
             commandBinder.Bind<StartSignal>().To<StartCommand>().Once();
+
+
         }
     }
 }

@@ -5,9 +5,11 @@ namespace Test
     public class StartSignal : Signal
     {
     }
-    public class Click : Signal
+    public class ClickSignal : Signal
     {
     }
-    public class Request : Signal
+    public class RequestSignal : Signal<string>
+    { }
+    public class FufillSignal : Signal
     { }
 }

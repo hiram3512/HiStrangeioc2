@@ -6,7 +6,7 @@ namespace Test
 {
     public class TestView : View
     {
-        public Click signal_Click = new Click();
+        public ClickSignal signal_Click = new ClickSignal();
         void OnGUI()
         {
             if (GUI.Button(new Rect(0, 0, 100, 40), "click"))
