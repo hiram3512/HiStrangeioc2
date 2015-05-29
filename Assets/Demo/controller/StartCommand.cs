@@ -11,7 +11,7 @@ namespace Test
         public override void Execute()
         {
             GameObject test = new GameObject("test");
-            Debug.Log("do");
+            test.AddComponent<TestView>();
             test.transform.SetParent(contextView.transform);
         }
     }

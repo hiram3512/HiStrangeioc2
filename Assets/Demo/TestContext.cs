@@ -29,6 +29,7 @@ namespace Test
         }
         protected override void mapBindings()
         {
+            mediationBinder.Bind<TestView>().To<TestMediator>();
             commandBinder.Bind<StartSignal>().To<StartCommand>().Once();
         }
     }
